@@ -1,5 +1,5 @@
 import requests
-
+from datetime import date
 
 def Main():
 	param = {
@@ -16,6 +16,8 @@ def Main():
 
 	for ar in articles:
 		results.append(ar["title"])
+
+	print(date.today())
 
 	for i in range(len(results)):
 		print(i+1,results[i])
