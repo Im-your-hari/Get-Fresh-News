@@ -3,12 +3,13 @@ import requests
 
 def Main():
 	param = {
-		"source" : "bbc-news",
+		"country" : "in",
 		"sortBy" : "top",
 		"apiKey" : "67079904a0ab4ac8b188b7f432a99569"
 	}
-	url = "https://newsapi.org/v1/articles"
+	url = "https://newsapi.org/v2/top-headlines"
 	res = requests.get(url,params = param)
+	#print(res)
 	page = res.json()
 	articles = page["articles"]
 	results = []
